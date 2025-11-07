@@ -1,0 +1,235 @@
+/* src/pages/LandingPage.css */
+
+.landing-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* --- General Section Styling --- */
+.landing-section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  color: var(--text-primary);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, rgba(13, 17, 23, 0) 0%, var(--bg-dark) 100%), 
+              radial-gradient(circle at top, var(--bg-light) 0%, var(--bg-dark) 70%);
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  background: -webkit-linear-gradient(45deg, var(--accent-blue), var(--text-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-cta .btn {
+  width: auto;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* --- How It Works Section --- */
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.step-card {
+  background-color: var(--bg-light);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-blue);
+  box-shadow: 0 10px 30px rgba(0, 170, 255, 0.1);
+}
+
+.step-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(0, 170, 255, 0.1);
+  color: var(--accent-blue);
+  margin-bottom: 1.5rem;
+}
+
+.step-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* --- Testimonials Section --- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: var(--bg-dark);
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-blue);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.testimonial-card h4 {
+  color: var(--text-primary);
+  text-align: right;
+  font-weight: 700;
+}
+
+/* --- FAQ Section --- */
+.faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background-color: var(--bg-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  color: var(--accent-blue);
+  margin-top: 4px;
+}
+
+.faq-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.faq-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* --- Final CTA Section --- */
+.cta-section {
+  text-align: center;
+  background-color: var(--bg-light);
+  border-radius: 12px;
+  padding: 4rem 2rem;
+}
+.cta-section h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.cta-section p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+.cta-section .btn {
+  width: auto;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+}
+
+/* --- Mobile Responsive Styles --- */
+@media (max-width: 992px) {
+  .how-it-works-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-section {
+    padding: 4rem 1rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-cta .btn {
+    width: 80%;
+  }
+
+  .landing-section {
+    padding: 3rem 1rem;
+  }
+}
